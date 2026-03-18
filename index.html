@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Self Introduction</title>
+        <style>
+            body{
+                margin : 0;
+                height : 100%;
+                background-color:black;
+            }
+            #title {
+                color : white;
+                font-size : 30px;
+                text-align : center;
+                margin-top : 200px;
+            }
+            .nav{
+                position: absolute;
+                padding : 10px;
+                background-color : gray;
+                color : white;
+            }
+            .nav:hover{
+                background-color : green;
+                color:black;
+            }
+            #north { top: 20px; left: 50%; transform: translateX(-50%); }
+            #south {bottom: 20px; left: 50%; transform: translateX(-50%); }
+            #west{left: 20px; top: 50%; transform:translateY(-50%);}
+            #east{right: 20px; top: 50%; transform:translateY(-50%);}
+            #northeast{top : 20px; right : 20px;}
+            #southeast{bottom: 20px; right:20px;}
+            #northwest{top:20px; left:20px;}
+            #southwest{bottom: 20px; left:20px;}
+        </style>
+    </head>
+    <body>
+        <div id = "title">Self Introduction</div>
+        <img id="mainImage" src="" alt="이미지" style="display:block; margin:10px auto; width:400px; height:300px; object-fit:contain;">
+        <div class = "nav" id = "north" onclick = "document.getElementById('mainImage'). src='north.png' ">Photo</div>
+        <div class = "nav" id = "south" onclick = "document.getElementById('mainImage'). innerText = 'south' ">Finding</div>
+        <div class = "nav" id = "west" onclick = "document.getElementById('mainImage'). innerText = 'west'">Resume</div>
+        <div class = "nav" id = "east" onclick = "document.getElementById('mainImage'). innerText = 'east'">Skills</div>
+        <div class = "nav" id = "northeast" onclick = "document.getElementById('mainImage'). innerText = 'northeast'">Acievement</div>
+        <div class = "nav" id = "southeast" onclick = "document.getElementById('title'). innerText = 'southeast'">SouthEast</div>
+        <div class = "nav" id = "northwest" onclick = "document.getElementById('title'). innerText = 'northwest'">NorthWest</div>
+        <div class = "nav" id = "southwest" onclick = "document.getElementById('title'). innerText = 'southwest'">SouthWest</div>
+    </body>
+</html>
