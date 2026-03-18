@@ -5,44 +5,78 @@
             body{
                 margin : 0;
                 height : 100%;
-                background-color:black;
+                background: linear-gradient(to bottom, #1a1a1a, #333);
+            }
+            #mainImage {
+            display: none; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 1200px;
+            object-fit: contain;
+            border: none; 
+            margin: 0;          
+            padding: 0;        
+            background: none;
             }
             #title {
                 color : white;
-                font-size : 30px;
+                font-size : 70px;
+                font-weight: bold;
                 text-align : center;
-                margin-top : 200px;
+                position: absolute;
+                top : 25%;
+                left : 50%;
+                transform: translate(-50%, -50%);
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
             }
             .nav{
                 position: absolute;
-                padding : 10px;
+                padding: 30px 30px;
                 background-color : gray;
-                color : white;
+                color : black;
+                border-radius: 8px;
+                min-width: 60px;     
+                text-align: center;
+                box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+                transition: all 0.3s ease;
             }
             .nav:hover{
                 background-color : green;
                 color:black;
+                transform: scale(1.1);
             }
-            #north { top: 20px; left: 50%; transform: translateX(-50%); }
+            #north { top: 30px; left: 50%; transform: translateX(-50%); }
             #south {bottom: 20px; left: 50%; transform: translateX(-50%); }
             #west{left: 20px; top: 50%; transform:translateY(-50%);}
             #east{right: 20px; top: 50%; transform:translateY(-50%);}
-            #northeast{top : 20px; right : 20px;}
-            #southeast{bottom: 20px; right:20px;}
-            #northwest{top:20px; left:20px;}
-            #southwest{bottom: 20px; left:20px;}
+            #center{top : 50%; left : 50%; transform:translate(-50%, -50%);}
         </style>
     </head>
     <body>
         <div id = "title">Self Introduction</div>
-        <img id="mainImage" src="" alt="이미지" style="display:block; margin:10px auto; width:400px; height:300px; object-fit:contain;">
-        <div class = "nav" id = "north" onclick = "document.getElementById('mainImage'). src='north.png' ">Photo</div>
-        <div class = "nav" id = "south" onclick = "document.getElementById('mainImage'). innerText = 'south' ">Finding</div>
-        <div class = "nav" id = "west" onclick = "document.getElementById('mainImage'). innerText = 'west'">Resume</div>
-        <div class = "nav" id = "east" onclick = "document.getElementById('mainImage'). innerText = 'east'">Skills</div>
-        <div class = "nav" id = "northeast" onclick = "document.getElementById('mainImage'). innerText = 'northeast'">Acievement</div>
-        <div class = "nav" id = "southeast" onclick = "document.getElementById('title'). innerText = 'southeast'">SouthEast</div>
-        <div class = "nav" id = "northwest" onclick = "document.getElementById('title'). innerText = 'northwest'">NorthWest</div>
-        <div class = "nav" id = "southwest" onclick = "document.getElementById('title'). innerText = 'southwest'">SouthWest</div>
+        <img id="mainImage" src="" alt="이미지">
+        <div class = "nav" id = "north" onclick = "document.getElementById('mainImage'). src='northeast.png';
+        document.getElementById('mainImage').style.display = 'block'
+        document.getElementById('title').style.display='none'; ">Achievement</div>
+
+        <div class = "nav" id = "west" onclick = "document.getElementById('mainImage'). src = 'west.png'
+        document.getElementById('mainImage').style.display = 'block'
+        document.getElementById('title').style.display='none';">Resume</div>
+
+        <div class = "nav" id = "east" onclick = "document.getElementById('mainImage'). src = 'east.png'; 
+        document.getElementById('mainImage').style.display = 'block'
+        document.getElementById('title').style.display='none';">Skills</div>
+
+        <div class = "nav" id = "south" onclick = "document.getElementById('mainImage'). src = 'south.png'
+        document.getElementById('mainImage').style.display = 'block' 
+        document.getElementById('title').style.display='none'">Finding</div>
+
+        <div class = "nav" id = "center" onclick = "document.getElementById('mainImage'). src = 'north.png'
+        document.getElementById('mainImage').style.display = 'block'
+        document.getElementById('title').style.display='none'
+        document.getElementById('center').style.display = 'none';">Photo</div>
     </body>
 </html>
